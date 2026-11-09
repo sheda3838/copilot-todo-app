@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple to-do list that saves your tasks on this device."
+    />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <p class="eyebrow">YOUR DAY, YOUR WAY</p>
+        <h1>My Tasks<span class="heading-dot">.</span></h1>
+        <p class="subtitle">A little progress adds up.</p>
+      </header>
+
+      <section class="task-card" aria-labelledby="task-heading">
+        <div class="card-heading">
+          <div>
+            <h2 id="task-heading">Your list</h2>
+            <p id="task-count" class="task-count">0 tasks</p>
+          </div>
+          <span class="list-icon" aria-hidden="true">✓</span>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <label class="visually-hidden" for="task-input">New task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="What needs to get done?"
+            maxlength="160"
+            required
+            autocomplete="off"
+          />
+          <button class="add-button" type="submit">
+            <span aria-hidden="true">+</span>
+            Add task
+          </button>
+        </form>
+
+        <p id="storage-message" class="storage-message" role="status"></p>
+
+        <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+
+        <p id="empty-message" class="empty-message">
+          Nothing on your list yet. Add a task to get started.
+        </p>
+      </section>
+
+      <footer class="app-footer">
+        <span class="footer-sparkle" aria-hidden="true">✦</span>
+        Your tasks stay saved on this device
+      </footer>
+    </main>
+  </body>
+</html>
